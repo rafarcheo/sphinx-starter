@@ -29,7 +29,13 @@ from recommonmark.parser import CommonMarkParser
 #theme template
 import sphinx_rtd_theme
 
+# set php  syntax highlighted
 
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+lexers['php'] = PhpLexer(startinline=True, linenos=1)
+lexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)
+primary_domain = 'php'
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -59,8 +65,8 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = 'sphinx-documentation'
-copyright = '2017, rafarcheo'
+project = 'set-this-in-conf.py'
+copyright = 'FREE'
 author = 'rafarcheo'
 
 # The version info for the project you're documenting, acts as replacement for
